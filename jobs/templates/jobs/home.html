@@ -8,7 +8,7 @@
   <meta name="generator" content="Hugo 0.80.0">
   <title>Travel blog</title>
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+  
 
 
 
@@ -47,16 +47,15 @@
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Sumoy Karmi</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Sumoy Karmi</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto">
-            <a class="nav-link active" aria-current="page" href="#">Twitter</a>
-            <a class="nav-link" href="#">Facebook</a>
-            <a class="nav-link" href="#">blog</a>
+          <div class="navbar-nav  ml-auto">
+            <a class="nav-link active" aria-current="page" href="https://twitter.com/sumoycontai">Twitter</a>
+            <a class="nav-link" href="https://m.facebook.com/sumoydmaxrider">Facebook</a>
+            <a class="nav-link" href="{% url 'allblogs' %}">blog</a>
           </div>
         </div>
       </div>
@@ -90,7 +89,8 @@
               <img class="bd-placeholder-img card-img-top" src="{{ job.image.url }}"  height=200 width=200/>
 
               <div class="card-body">
-                <p class="card-text">{{ job.summary }}</p>
+                <p class="card-text" >{{ job.summary }}</p>
+                <a class="nav-link" href="{% url 'allblogs' %}"></a>
               </div>
             </div>
           </div>
